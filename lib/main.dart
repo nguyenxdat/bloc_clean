@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'di/injection.dart';
 import 'route/route.dart';
+import 'services/navigation_services.dart';
 
 void main() async {
   await configureDependencies();
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      navigatorKey: NavigationService.navigationKey,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
